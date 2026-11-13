@@ -1,0 +1,297 @@
+{
+  "judul": "Sistem Pakar Diagnosis Penyakit pada Kucing dengan Metode Forward Chaining",
+  "batas": "Pengetahuan disusun dari tiga jurnal tentang penyakit kucing (S1-S3) dan hanya mencakup 5 penyakit serta gejala yang tercantum pada knowledge_base.json. Sistem ini ditujukan untuk pemilik kucing domestik sebagai saran diagnosis awal, bukan diagnosis pasti, dan tidak menggantikan pemeriksaan dokter hewan. Jika gejala berlanjut atau memburuk, segera bawa kucing ke dokter hewan.",
+  "sumber": {
+    "S1": "Wildan Mukholad Fauzi, Garno, Iqbal Maulana. Sistem Pakar Diagnosis Penyakit pada Kucing Menggunakan Metode Forward Chaining dan Algoritma Naive Bayes. JATI (Jurnal Mahasiswa Teknik Informatika), Vol. 9 No. 3, Juni 2025, hlm. 4672-4679. https://doi.org/10.36040/jati.v9i3.13823, diakses 14 November 2026.",
+    "S2": "Riswan Fauzan, N. Nelis Febriani SM, Robby Maududy. Sistem Pakar Diagnosa Penyakit Pada Kucing Domestik Menggunakan Metode Certainty Factor Dan Forward Chaining Berbasis Android. Informatics and Digital Expert (INDEX), Vol. 7 No. 2, 2025, hlm. 168-176. https://doi.org/10.36423/index.v7i2.2427, diakses 14 November 2026.",
+    "S3": "Jimsan Jimsan, Satriani Satriani. Sistem Pakar untuk Identifikasi Penyakit pada Kucing dengan Pendekatan Forward Chaining dan Certainty Factor. EXPLORE: Jurnal Sistem Informasi dan Telematika, Vol. 17 No. 1, Juni 2026, hlm. 16-24. https://doi.org/10.36448/jsit.v17i1.4521, diakses 14 November 2026."
+  },
+  "gejala": [
+    {
+      "kode": "G01",
+      "nama": "iritasi kulit",
+      "tanya": "Apakah kucing mengalami iritasi kulit?"
+    },
+    {
+      "kode": "G02",
+      "nama": "gatal intens",
+      "tanya": "Apakah kucing mengalami gatal intens?"
+    },
+    {
+      "kode": "G03",
+      "nama": "pembengkakan pada saluran telinga",
+      "tanya": "Apakah kucing mengalami pembengkakan pada saluran telinga?"
+    },
+    {
+      "kode": "G04",
+      "nama": "kerontokan",
+      "tanya": "Apakah kucing mengalami kerontokan bulu?"
+    },
+    {
+      "kode": "G05",
+      "nama": "keluarnya cairan berwarna gelap dari telinga",
+      "tanya": "Apakah kucing mengalami keluarnya cairan berwarna gelap dari telinga?"
+    },
+    {
+      "kode": "G06",
+      "nama": "penurunan berat badan",
+      "tanya": "Apakah kucing mengalami penurunan berat badan?"
+    },
+    {
+      "kode": "G07",
+      "nama": "bulu yang kusam",
+      "tanya": "Apakah bulu kucing tampak kusam?"
+    },
+    {
+      "kode": "G08",
+      "nama": "perut buncit",
+      "tanya": "Apakah perut kucing tampak buncit?"
+    },
+    {
+      "kode": "G09",
+      "nama": "lesi kulit pada telinga, wajah, dan leher",
+      "tanya": "Apakah kucing mengalami lesi kulit pada telinga, wajah, dan leher?"
+    },
+    {
+      "kode": "G10",
+      "nama": "muntah",
+      "tanya": "Apakah kucing muntah?"
+    },
+    {
+      "kode": "G11",
+      "nama": "kemerahan pada saluran telinga",
+      "tanya": "Apakah kucing mengalami kemerahan pada saluran telinga?"
+    },
+    {
+      "kode": "G12",
+      "nama": "bau tidak sedap dari telinga",
+      "tanya": "Apakah kucing mengalami bau tidak sedap dari telinga?"
+    },
+    {
+      "kode": "G13",
+      "nama": "pruritus (gatal di telinga)",
+      "tanya": "Apakah kucing mengalami pruritus (gatal di telinga)?"
+    },
+    {
+      "kode": "G14",
+      "nama": "menggaruk atau menggosok telinga (trauma)",
+      "tanya": "Apakah kucing sering menggaruk atau menggosok telinga hingga trauma?"
+    },
+    {
+      "kode": "G15",
+      "nama": "gatal",
+      "tanya": "Apakah kucing mengalami gatal?"
+    },
+    {
+      "kode": "G16",
+      "nama": "pembentukan kerak pada kulit",
+      "tanya": "Apakah kucing mengalami pembentukan kerak pada kulit?"
+    },
+    {
+      "kode": "G17",
+      "nama": "diare",
+      "tanya": "Apakah kucing mengalami diare?"
+    },
+    {
+      "kode": "G18",
+      "nama": "anemia",
+      "tanya": "Apakah kucing mengalami anemia?"
+    },
+    {
+      "kode": "G21",
+      "nama": "kurang nafsu makan",
+      "tanya": "Apakah kucing mengalami kurang nafsu makan?"
+    },
+    {
+      "kode": "G22",
+      "nama": "demam",
+      "tanya": "Apakah kucing mengalami demam?"
+    },
+    {
+      "kode": "G23",
+      "nama": "bersin",
+      "tanya": "Apakah kucing bersin?"
+    },
+    {
+      "kode": "G24",
+      "nama": "pilek",
+      "tanya": "Apakah kucing pilek?"
+    },
+    {
+      "kode": "G25",
+      "nama": "sariawan pada lidah dan mulut",
+      "tanya": "Apakah kucing mengalami sariawan pada lidah dan mulut?"
+    },
+    {
+      "kode": "G26",
+      "nama": "lesu",
+      "tanya": "Apakah kucing lesu?"
+    },
+    {
+      "kode": "S2-G23",
+      "nama": "kurus (kurang dari berat ideal biasanya)",
+      "tanya": "Apakah kucing tampak kurus (berat badan di bawah ideal)?"
+    },
+    {
+      "kode": "S2-G24",
+      "nama": "makan banyak",
+      "tanya": "Apakah kucing makan banyak (lebih dari biasanya)?"
+    },
+    {
+      "kode": "S2-G25",
+      "nama": "keluar cacing dari anus",
+      "tanya": "Apakah kucing mengeluarkan cacing dari anus?"
+    },
+    {
+      "kode": "S2-G26",
+      "nama": "muntah cacing",
+      "tanya": "Apakah kucing muntah cacing?"
+    }
+  ],
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": [
+        "gatal intens",
+        "kerontokan"
+      ],
+      "mode": "dan",
+      "maka": "indikasi gangguan kulit",
+      "sumber": "S1",
+      "jenis": "fakta antara",
+      "catatan": "Fakta antara buatan untuk memecah aturan P02 (Kudis/Skabies) S1. Dua gejala ini adalah bagian dari aturan P02, bukan nama diagnosis resmi."
+    },
+    {
+      "id": "R2",
+      "jika": [
+        "indikasi gangguan kulit",
+        "lesi kulit pada telinga, wajah, dan leher",
+        "pembentukan kerak pada kulit"
+      ],
+      "mode": "dan",
+      "maka": "kudis",
+      "sumber": "S1",
+      "jenis": "diagnosis",
+      "catatan": "Aturan P02 (Kudis/Skabies) S1: G02, G04, G09, G16."
+    },
+    {
+      "id": "R3",
+      "jika": [
+        "iritasi kulit",
+        "kerontokan"
+      ],
+      "mode": "dan",
+      "maka": "indikasi ektoparasit",
+      "sumber": "S1",
+      "jenis": "fakta antara",
+      "catatan": "Fakta antara buatan untuk memecah aturan P03 (Pijal/Ektoparasit) S1. Dua gejala ini adalah bagian dari aturan P03, bukan nama diagnosis resmi."
+    },
+    {
+      "id": "R4",
+      "jika": [
+        "indikasi ektoparasit",
+        "gatal",
+        "anemia"
+      ],
+      "mode": "dan",
+      "maka": "pijal",
+      "sumber": "S1",
+      "jenis": "diagnosis",
+      "catatan": "Aturan P03 (Pijal/Ektoparasit) S1: G01, G04, G15, G18."
+    },
+    {
+      "id": "R5",
+      "jika": [
+        "penurunan berat badan",
+        "muntah"
+      ],
+      "mode": "dan",
+      "maka": "indikasi gangguan pencernaan",
+      "sumber": "S1",
+      "jenis": "fakta antara",
+      "catatan": "Fakta antara buatan untuk memecah aturan P01 (Cacingan/Helminthiasis) S1. Dua gejala ini adalah bagian dari aturan P01, bukan nama diagnosis resmi."
+    },
+    {
+      "id": "R6",
+      "jika": [
+        "indikasi gangguan pencernaan",
+        "bulu yang kusam",
+        "perut buncit",
+        "diare"
+      ],
+      "mode": "dan",
+      "maka": "cacingan",
+      "sumber": "S1",
+      "jenis": "diagnosis",
+      "catatan": "Aturan P01 (Cacingan/Helminthiasis) S1: G06, G07, G08, G10, G17."
+    },
+    {
+      "id": "R7",
+      "jika": [
+        "kurang nafsu makan",
+        "demam"
+      ],
+      "mode": "dan",
+      "maka": "indikasi infeksi saluran pernapasan",
+      "sumber": "S1",
+      "jenis": "fakta antara",
+      "catatan": "Fakta antara buatan untuk memecah aturan P07 (Flu Kucing/Herpesvirus) S1. Dua gejala ini adalah bagian dari aturan P07, bukan nama diagnosis resmi."
+    },
+    {
+      "id": "R8",
+      "jika": [
+        "indikasi infeksi saluran pernapasan",
+        "bersin",
+        "pilek",
+        "sariawan pada lidah dan mulut",
+        "lesu"
+      ],
+      "mode": "dan",
+      "maka": "flu kucing",
+      "sumber": "S1",
+      "jenis": "diagnosis",
+      "catatan": "Aturan P07 (Flu Kucing/Herpesvirus) S1: G21, G22, G23, G24, G25, G26."
+    },
+    {
+      "id": "R9",
+      "jika": [
+        "menggaruk atau menggosok telinga (trauma)",
+        "bau tidak sedap dari telinga"
+      ],
+      "mode": "dan",
+      "maka": "indikasi infeksi telinga",
+      "sumber": "S1",
+      "jenis": "fakta antara",
+      "catatan": "Fakta antara buatan untuk memecah aturan P04 (Infeksi Telinga/Otodectes Cynotis) S1. Dua gejala ini adalah bagian dari aturan P04, bukan nama diagnosis resmi."
+    },
+    {
+      "id": "R10",
+      "jika": [
+        "indikasi infeksi telinga",
+        "pembengkakan pada saluran telinga",
+        "keluarnya cairan berwarna gelap dari telinga",
+        "kemerahan pada saluran telinga",
+        "pruritus (gatal di telinga)"
+      ],
+      "mode": "dan",
+      "maka": "infeksi telinga",
+      "sumber": "S1",
+      "jenis": "diagnosis",
+      "catatan": "Aturan P04 (Infeksi Telinga/Otodectes Cynotis) S1: G03, G05, G11, G12, G13, G14."
+    },
+    {
+      "id": "R11",
+      "jika": [
+        "kurus (kurang dari berat ideal biasanya)",
+        "makan banyak",
+        "keluar cacing dari anus",
+        "muntah cacing"
+      ],
+      "mode": "dan",
+      "maka": "cacingan",
+      "sumber": "S2",
+      "jenis": "diagnosis",
+      "catatan": "Aturan P08 (Helminthiasis) S2: G23, G24, G25, G26. Ini aturan alternatif dari S2; aturan utama cacingan di R5-R6 memakai P01 dari S1 dengan gejala yang berbeda."
+    }
+  ]
+}
