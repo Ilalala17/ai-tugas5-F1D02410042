@@ -9,7 +9,6 @@ Tugas 5 - Kecerdasan Buatan (MKL1303131), Teknik Informatika UNRAM.
 | Mata kuliah | Kecerdasan Buatan (MKL1303131) |
 | Program studi | Teknik Informatika, Universitas Mataram |
 
-> Ganti **[Nama Mahasiswa]** dengan nama lengkap sebelum repository dikumpulkan.
 
 ## 1. Topik dan tujuan
 
