@@ -4,7 +4,7 @@ Tugas 5 - Kecerdasan Buatan (MKL1303131), Teknik Informatika UNRAM.
 
 | Identitas | Keterangan |
 | --- | --- |
-| Nama | **[Nama Mahasiswa]** |
+| Nama | **Fadila Rosidatul A'la** |
 | NIM | **F1D02410042** |
 | Mata kuliah | Kecerdasan Buatan (MKL1303131) |
 | Program studi | Teknik Informatika, Universitas Mataram |
